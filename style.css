@@ -1,0 +1,113 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins';
+   font-weight: 400;
+   color: #6e7381;
+}
+
+.screen{
+   display: flex;
+   height: 100vh;
+}
+.leftside{
+   flex: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-image: url(images/bg.png);
+}
+.rightside{
+   width: 50vw;
+   background-color: #1C2E4F;
+   color: white;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.rightside .form{
+   max-width: 300px;
+}
+.rightside h1{
+   color: #e1cbb1;
+   font-weight: 500;
+}
+.rightside p{
+   font-size: 14px;
+   margin-bottom: 35px;
+}
+.rightside label{
+   display: block;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-bottom: 20px;
+}
+.rightside label:nth-child(3){
+   margin-bottom: 50px;
+}
+.rightside label input{
+   outline: 0;
+   background-color: transparent;
+   border: 2px solid #6e7381;
+   padding: 11px;
+   width: 100%;
+   font-size: 14px;
+   color: #e1cbb1;
+   transition: all 0.3s ease;
+}
+.rightside label input::placeholder{
+   color: #6e7381;
+}
+
+#submits{
+   background-color: #e1cbb1;
+   color: #1C2E4F;
+   font-weight: 600;
+   border: 0;
+   cursor: pointer;
+}
+#submits:hover{
+   transition: all 0.2s ease;
+   background-color: white;
+}
+.login{
+   text-align: center;
+   font-size: 14px;
+}
+a{
+   color: #e1cbb1;
+}
+a:hover{
+   color: white;
+   transition: all 0.1s ease;
+}
+.copyright{
+   position: absolute;
+   right: 10px;
+   bottom: 10px;
+   font-size: 14px;
+}
+.error{
+   background-color: #e1cbb1;
+   color: #1C2E4F;
+   font-size: 14px;
+   border-radius: 0px 0px 5px 5px;
+   padding-left: 10px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #e1cbb1 !important;
+  -webkit-box-shadow: 0 0 0 1000px #1C2E4F inset;
+}
