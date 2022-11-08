@@ -111,3 +111,12 @@ select:-webkit-autofill:focus {
   -webkit-text-fill-color: #e1cbb1 !important;
   -webkit-box-shadow: 0 0 0 1000px #1C2E4F inset;
 }
+
+@media (max-width: 690px) {
+   .leftside{
+      display: none;
+   }
+   .rightside{
+      width: 100vw;
+   }
+}
