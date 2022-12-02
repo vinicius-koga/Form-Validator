@@ -1,4 +1,4 @@
-*{
+* {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
@@ -7,18 +7,20 @@
    color: #6e7381;
 }
 
-.screen{
+.screen {
    display: flex;
    height: 100vh;
 }
-.leftside{
+
+.leftside {
    flex: 1;
    display: flex;
    justify-content: center;
    align-items: center;
    background-image: url(images/bg.png);
 }
-.rightside{
+
+.rightside {
    width: 50vw;
    background-color: #1C2E4F;
    color: white;
@@ -27,20 +29,73 @@
    justify-content: center;
    align-items: center;
 }
-.rightside .form{
+
+.rightside .info {
+   height: 50px;
+   width: 50px;
+   background-color: #e1cbb1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 2rem;
+   font-weight: 600;
+   color: #1C2E4F;
+   position: absolute;
+   right: 10px;
+   top: 10px;
+   cursor: pointer;
+   transition: all 0.2s ease;
+}
+
+.rightside .info:hover {
+   background-color: #e4d9cd;
+}
+
+.infoBox {
+   max-width: 270px;
+   height: auto;
+   background-color: #e1cbb1;
+   position: absolute;
+   right: 10px;
+   top: 60px;
+   z-index: 1;
+   transition: all 0.2s ease;
+   opacity: 0;
+   box-shadow: -5px 10px 8px rgba(28, 46, 79, 0.5);
+}
+
+.infoBox-rules {
+   width: 100%;
+   padding: 30px;
+}
+
+.infoBox-rules ul li {
+   color: #1C2E4F;
+   margin-bottom: 15px;
+}
+
+.infoBox-rules ul li:last-child {
+   margin-bottom: 0;
+}
+
+.rightside .form {
    max-width: 300px;
 }
-.rightside h1{
+
+.form h1 {
    color: #e1cbb1;
    font-weight: 500;
    text-align: center;
+   font-size: 1.8rem;
 }
-.rightside p{
-   font-size: 14px;
+
+.form p {
+   font-size: 0.9rem;
    margin-bottom: 35px;
    text-align: center;
 }
-.rightside label{
+
+.form label {
    display: block;
    position: relative;
    display: flex;
@@ -48,77 +103,86 @@
    justify-content: center;
    margin-bottom: 20px;
 }
-.rightside label:nth-child(3){
+
+.form label:nth-child(3) {
    margin-bottom: 50px;
 }
-.rightside label input{
+
+.form label input {
    outline: 0;
    background-color: transparent;
    border: 2px solid #6e7381;
    padding: 11px;
    width: 100%;
-   font-size: 14px;
+   font-size: 0.9rem;
    color: #e1cbb1;
    transition: all 0.3s ease;
 }
-.rightside label input::placeholder{
+
+.form label input::placeholder {
    color: #6e7381;
 }
 
-#submits{
+#submits {
    background-color: #e1cbb1;
    color: #1C2E4F;
    font-weight: 600;
    border: 0;
    cursor: pointer;
 }
-#submits:hover{
+
+#submits:hover {
    transition: all 0.2s ease;
    background-color: white;
 }
-.login{
+
+.login {
    text-align: center;
-   font-size: 14px;
+   font-size: 0.9rem;
 }
-a{
+
+a {
    color: #e1cbb1;
 }
-a:hover{
+
+a:hover {
    color: white;
    transition: all 0.1s ease;
 }
-.copyright{
+
+.copyright {
    position: absolute;
    right: 10px;
    bottom: 10px;
-   font-size: 14px;
+   font-size: 0.9rem;
 }
-.error{
+
+.error {
    background-color: #e1cbb1;
    color: #1C2E4F;
-   font-size: 14px;
+   font-size: 0.9rem;
    border-radius: 0px 0px 5px 5px;
    padding-left: 10px;
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover
-textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color: #e1cbb1 !important;
-  -webkit-box-shadow: 0 0 0 1000px #1C2E4F inset;
+   -webkit-text-fill-color: #e1cbb1 !important;
+   -webkit-box-shadow: 0 0 0 1000px #1C2E4F inset;
 }
 
 @media (max-width: 690px) {
-   .leftside{
+   .leftside {
       display: none;
    }
-   .rightside{
+
+   .rightside {
       width: 100vw;
    }
 }

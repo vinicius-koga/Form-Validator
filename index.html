@@ -12,17 +12,30 @@
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet"> 
 </head>
 <body>
-   <div class="screen">
+   <main class="screen">
 
-      <div class="leftside"></div>
+      <section class="leftside"></section>
 
-      <div class="rightside">
+      <section class="rightside">
+
+         <div class="info tg" style="border-radius: 8px;">?</div>
+         <div class="infoBox tg" style="border-radius: 8px 0px 8px 8px; display: none;">
+            <div class="infoBox-rules tg">
+               <ul class="tg">
+                  <li class="tg">Todos os campos devem estar preenchidos</li>
+                  <li class="tg">Usuário deve conter de 3 à 12 caracteres</li>
+                  <li class="tg">E-mail precisa ser válido</li>
+                  <li class="tg">Senha deve conter no mínimo 8 caracteres</li>
+               </ul>
+            </div>
+         </div>
+
          <div class="form">
             <h1>Crie uma conta</h1>
             <p>A validação de seus dados foi feita inteiramente em Javascript! :)</p>
             <form method="POST" class="b7validator" action="register.php">
                <label>
-                  <input type="text" name="nome" placeholder="Nome de usuário" data-rules="required&min=5">
+                  <input type="text" name="nome" placeholder="Nome de usuário" data-rules="required&min=3&max=12">
                </label>
                <label>
                   <input type="text" name="email" placeholder="Email"  data-rules="required&email">
@@ -40,7 +53,7 @@
             </div>
          </div>
          <div class="copyright">Baseado em um template de <a href="https://www.jimraptis.com/?ref=dribbble" target="_blank">Jim Raptis</a></div>
-      </div>
-   </div>
+      </section>
+   </main>
 </body>
 </html>
