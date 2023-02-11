@@ -2,7 +2,7 @@
 let formFunctions = {
    handleSubmit: (e) => {
       e.preventDefault();
-      let inputs = document.querySelectorAll('.b7validator input');
+      let inputs = document.querySelectorAll('.text-input');
       let send = true;
 
       formFunctions.clearError();
@@ -17,8 +17,9 @@ let formFunctions = {
       }
 
       if (send) {
-         alert('Formulário enviado!')
-         form.submit();
+         alert('Agora é com o back-end! :)');
+         inputs.forEach(i => i.value = '');
+         // form.submit();
       }
    },
    checkInput: (input) => {
@@ -44,9 +45,43 @@ let formFunctions = {
                   }
                   break;
                case 'email':
-                  let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                  if (!regex.test(input.value.toLowerCase())) {
-                     return 'Digite um email válido'
+                  let email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                  if (!email.test(input.value.toLowerCase())) {
+                     return 'Insira um email válido'
+                  }
+                  break;
+               case 'needSymbol':
+                  let needSymbol = /\W|_/;
+                  if (!needSymbol.test(input.value.toLowerCase())) {
+                     return 'Insira ao menos 1 caractere especial'
+                  }
+                  break;
+               case 'noSpace':
+                  if (input.value.indexOf(' ') >= 0) {
+                     return 'Não pode conter espaços'
+                  }
+                  break;
+               case 'noSymbol':
+                  let noSymbol = /\W|_/;
+                  if (noSymbol.test(input.value.toLowerCase())) {
+                     return 'Não pode conter símbolos ou espaços'
+                  }
+                  break;
+               case 'noNumber':
+                  let noNumber = /[0-9]/;
+                  if (noNumber.test(input.value.toLowerCase())) {
+                     return 'Não pode conter números'
+                  }
+                  break;
+               case 'name':
+                  let name = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/
+                  if (!name.test(input.value)) {
+                     return 'Insira um nome valido'
+                  }
+                  break;
+               case 'needSpace':
+                  if (input.value.indexOf(' ') < 0) {
+                     return 'Insira seu sobrenome'
                   }
                   break;
             }
@@ -76,43 +111,5 @@ let formFunctions = {
    }
 }
 
-let form = document.querySelector('.b7validator');
+let form = document.querySelector('.validator');
 form.addEventListener('submit', formFunctions.handleSubmit);
-
-
-
-//INFO BUTTON
-document.querySelector('.info').addEventListener('click', () => {
-   let info = document.querySelector('.info');
-   let infoBox = document.querySelector('.infoBox');
-
-   if (infoBox.style.display === 'none') {
-      info.style.borderRadius = '8px 8px 0px 0px';
-      info.innerHTML = 'X';
-      infoBox.style.display = 'block';
-      setTimeout(() => {
-         infoBox.style.opacity = '1';
-      })
-   } else if (infoBox.style.display === 'block') {
-      info.style.borderRadius = '8px';
-      infoBox.style.opacity = '0';
-      info.innerText = '?';
-      setTimeout(() => {
-         infoBox.style.display = 'none';
-      }, 200)
-   }
-})
-
-document.addEventListener('click', (e) => {
-   let info = document.querySelector('.info');
-   let infoBox = document.querySelector('.infoBox');
-
-   if (e.target.classList.contains('tg')) return;
-
-   info.style.borderRadius = '8px';
-   infoBox.style.opacity = '0';
-   info.innerText = '?';
-   setTimeout(() => {
-      infoBox.style.display = 'none';
-   }, 200);
-})

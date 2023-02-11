@@ -48,7 +48,7 @@
 }
 
 .rightside .info:hover {
-   background-color: #e4d9cd;
+   background-color: #fff;
 }
 
 .infoBox {
@@ -78,24 +78,28 @@
    margin-bottom: 0;
 }
 
-.rightside .form {
+.rightside form {
    max-width: 300px;
 }
 
-.form h1 {
+form fieldset {
+   border: 0;
+}
+
+form legend {
    color: #e1cbb1;
    font-weight: 500;
    text-align: center;
    font-size: 1.8rem;
 }
 
-.form p {
+form p {
    font-size: 0.9rem;
    margin-bottom: 35px;
    text-align: center;
 }
 
-.form label {
+form .form-input {
    display: block;
    position: relative;
    display: flex;
@@ -104,11 +108,11 @@
    margin-bottom: 20px;
 }
 
-.form label:nth-child(3) {
+form .form-input:nth-of-type(4) {
    margin-bottom: 50px;
 }
 
-.form label input {
+form .form-input input {
    outline: 0;
    background-color: transparent;
    border: 2px solid #6e7381;
@@ -119,7 +123,7 @@
    transition: all 0.3s ease;
 }
 
-.form label input::placeholder {
+form .form-input input::placeholder {
    color: #6e7381;
 }
 
