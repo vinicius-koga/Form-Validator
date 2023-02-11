@@ -33,7 +33,7 @@
 .rightside .info {
    height: 50px;
    width: 50px;
-   background-color: #e1cbb1;
+   background-color: #fff;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -48,34 +48,11 @@
 }
 
 .rightside .info:hover {
-   background-color: #fff;
+   transform: scale(1.05);
 }
 
-.infoBox {
-   max-width: 270px;
-   height: auto;
-   background-color: #e1cbb1;
-   position: absolute;
-   right: 10px;
-   top: 60px;
-   z-index: 1;
-   transition: all 0.2s ease;
-   opacity: 0;
-   box-shadow: -5px 10px 8px rgba(28, 46, 79, 0.5);
-}
-
-.infoBox-rules {
-   width: 100%;
-   padding: 30px;
-}
-
-.infoBox-rules ul li {
-   color: #1C2E4F;
-   margin-bottom: 15px;
-}
-
-.infoBox-rules ul li:last-child {
-   margin-bottom: 0;
+.list li {
+   color: #444;
 }
 
 .rightside form {

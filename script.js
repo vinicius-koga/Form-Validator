@@ -113,3 +113,5 @@ let formFunctions = {
 
 let form = document.querySelector('.validator');
 form.addEventListener('submit', formFunctions.handleSubmit);
+
+

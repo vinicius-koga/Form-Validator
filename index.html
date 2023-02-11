@@ -5,6 +5,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Form Validator</title>
+   <link rel="stylesheet" href="bootstrap.min.css">
    <link rel="stylesheet" href="style.css">
    <script src="script.js" defer></script>
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,12 +19,14 @@
 
       <main class="rightside">
 
+         <div class="info tg" style="border-radius: 8px;" data-bs-toggle="modal" data-bs-target="#exampleModal">?</div>
+
          <form method="post" class="validator" action="example.php">
             <fieldset>
                <legend>Crie uma conta</legend>
                <p>A validação de seus dados foi feita inteiramente em Javascript! :)</p>
                <div class="form-input">
-                  <input type="text" name="username" placeholder="Nome" data-rules="required&min=3&name&needSpace" class="text-input">
+                  <input type="text" name="username" placeholder="Nome" data-rules="required&min=2&name&needSpace" class="text-input">
                </div>
                <div class="form-input">
                   <input type="text" name="email" placeholder="Email"  data-rules="required&email" class="text-input">
@@ -44,5 +47,51 @@
          <footer class="copyright">Baseado em um template de <a href="https://www.jimraptis.com/?ref=dribbble" target="_blank">Jim Raptis</a></footer>
       </main>
    </div>
+
+   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000;">Informações</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <p style="color: #000; font-size: 1.4rem;">Confira todas as validações implementadas via Javascript:</p>
+            <div class="text-start mt-2">
+               <ul >
+                  <li style="color: #000;" class="mt-4">
+                     Nome:
+                        <ul class="list">
+                           <li>Campo precisa estar preenchido</li>
+                           <li>Quantidade mínima de caracteres: 2</li>
+                           <li>Não pode conter caracteres especiais e numeros</li>
+                           <li>Precisa conter sobrenome</li>
+                        </ul>
+                  </li>
+                  <li style="color: #000;" class="mt-4">
+                     E-mail:
+                        <ul class="list">
+                           <li>Campo precisa estar preenchido</li>
+                           <li>E-mail precisa ser válido</li>
+                        </ul>
+                  </li>
+                  <li style="color: #000;" class="mt-4">
+                     Senha:
+                        <ul class="list">
+                           <li>Campo precisa estar preenchido</li>
+                           <li>Quantidade mínima de caracteres: 8</li>
+                           <li>Precisa conter ao menos 1 caractere especial</li>
+                           <li>Não pode conter espaços</li>
+                        </ul>
+                  </li>
+               </ul>
+            </div>
+         
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
 </body>
 </html>
