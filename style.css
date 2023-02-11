@@ -31,9 +31,9 @@
 }
 
 .rightside .info {
-   height: 50px;
-   width: 50px;
-   background-color: #fff;
+   height: 40px;
+   width: 40px;
+   background-color: #e4d7c9;
    display: flex;
    align-items: center;
    justify-content: center;
