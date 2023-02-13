@@ -30,7 +30,7 @@
    align-items: center;
 }
 
-.rightside .info {
+/* .rightside .info {
    height: 40px;
    width: 40px;
    background-color: #e4d7c9;
@@ -49,7 +49,7 @@
 
 .rightside .info:hover {
    transform: scale(1.05);
-}
+} */
 
 .list li {
    color: #444;
@@ -156,6 +156,15 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
    -webkit-text-fill-color: #e1cbb1 !important;
    -webkit-box-shadow: 0 0 0 1000px #1C2E4F inset;
+}
+
+input[type="password"] {
+   color: white;
+   background-color: black;
+}
+
+::-ms-reveal {
+   filter: invert(100%);
 }
 
 @media (max-width: 690px) {
