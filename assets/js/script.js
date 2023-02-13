@@ -76,7 +76,7 @@ let formFunctions = {
                case 'name':
                   let name = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/
                   if (!name.test(input.value)) {
-                     return 'Insira um nome valido'
+                     return 'Insira um nome válido'
                   }
                   break;
                case 'needSpace':
