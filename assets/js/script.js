@@ -17,7 +17,7 @@ let formFunctions = {
       }
 
       if (send) {
-         alert('Agora é com o back-end! :)');
+         alert('Seu formulário está pronto para ser enviado!');
          inputs.forEach(i => i.value = '');
          // form.submit();
       }
