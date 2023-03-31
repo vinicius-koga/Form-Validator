@@ -9,4 +9,6 @@ Validador de formulários com validação dos dados feita inteiramente em Javasc
   <li>JAVASCRIPT</li>
 </ul>
 
-Template by <a href="https://www.jimraptis.com/?ref=dribbble">Jim Raptis</a>
+### Este site é responsivo à dispositivos mobile
+
+Template por <a href="https://www.jimraptis.com/?ref=dribbble">Jim Raptis</a>
